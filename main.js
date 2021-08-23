@@ -90,7 +90,7 @@ var paragraphs = document.getElementsByTagName("p");
   myimg.style.height = "140px";
   myimg.style.width = "140px";
   myimg.style.borderRadius = "70px"
-  button.style.cursor = "pointer";
+  myimg.style.cursor = "pointer";
 
   outSpan.appendChild(myimg);
   outSpan.style.position = "sticky";
