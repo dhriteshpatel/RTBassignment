@@ -39,9 +39,13 @@
         var button = document.createElement('button');
         button.id = "crossbutton";
         button.innerHTML = "X";
+        button.style.color = "black";
+        button.style.fontWeight = 400;
+        button.style.border = "none"
         button.style.position = "absolute";
-        button.style.top = "2px";
-        button.style.left = "2px";
+        button.style.bottom = "10px";
+        button.style.right = "5%";
+        button.style.backgroundColor = "white";
         button.style.width = "60px"
         
         button.style.cursor = "pointer";
