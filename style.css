@@ -2,3 +2,37 @@
     margin: 0;
     padding: 0;
 }
+
+.earth{
+    position: sticky;
+    bottom: -13%;
+    left: 17vw; 
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    background: url("https://rtbdemand.com/images/logo.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0,0,0,1),0 0 20px blue;
+    animation: animateEarth 10s linear infinite;
+    background-color:#FCE205;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@keyframes animateEarth{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -650px 0;
+    }
+}
+
+
+
+
+
+
+

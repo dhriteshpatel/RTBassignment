@@ -1,9 +1,27 @@
-  //adding styling to the elements
-  var rotateDeg = 20;
+
+ //adding styling to the elements
   var body = document.getElementsByTagName("body");
   body.position = "relative";
-  document.getElementById("body").style.padding = "50px 200px";
+  document.getElementById("body").style.padding = "0px 11vw";
   var paragraphs = document.querySelectorAll('p');
+  
+  // Adding the header
+
+  var header = document.createElement("header");
+  header.style.backgroundColor = "#FCE205";
+  header.style.height = "100px";
+  header.style.width = "100%";
+  header.style.padding = "20px"
+  document.getElementById("body").appendChild(header);
+  var logoImage = document.createElement("img");
+  logoImage.src = "https://rtbdemand.com/images/logo.png"
+  logoImage.style.width = "10%";
+  logoImage.style.height = "90%";
+  logoImage.style.backgroundColor = "white";
+  logoImage.style.borderRadius = "100%";
+  header.appendChild(logoImage);
+
+  
 
   
   // linking the css using javascript
@@ -38,7 +56,7 @@
         div.style.position = "relative";
         var button = document.createElement('button');
         button.id = "crossbutton";
-        button.innerHTML = "X";
+        button.innerHTML = "x";
         button.style.color = "black";
         button.style.fontWeight = 400;
         button.style.border = "none"
@@ -68,7 +86,12 @@
       }
       return randomPara;
     }
-    document.body.appendChild(p)
+    document.body.appendChild(p);
+    if( i == 9){
+      var rtbEle =document.createElement("div");
+      rtbEle.className = "earth";
+      document.body.appendChild(rtbEle);
+    }
   }
 
   document.getElementById("crossbutton").addEventListener("click", (event) => {
@@ -78,33 +101,28 @@
 
 var paragraphs = document.getElementsByTagName("p");
   for(paragraph of paragraphs){
-    paragraph.style.margin = '20px';
+    paragraph.style.margin = '10px 0';
+    paragraph.style.fontFamily = "'Courier New', Courier, monospace";
+    paragraph.style.fontWeight = "500";
   }
 
+  rtbEle.addEventListener("click", () =>{
+    window.location.href = "api.html"
+  });
 
-  var outSpan = document.createElement("span");
-  outSpan.id = "mySpan"
-  var myimg = document.createElement("img");
-  myimg.id = "rotateImg";
-  myimg.src = "https://yt3.ggpht.com/ytc/AKedOLTSqnub_4PzK8E6X7-9m8utThcY6YdsUqHw-nw=s900-c-k-c0x00ffffff-no-rj";
-  myimg.style.height = "140px";
-  myimg.style.width = "140px";
-  myimg.style.borderRadius = "70px"
-  myimg.style.cursor = "pointer";
 
-  outSpan.appendChild(myimg);
-  outSpan.style.position = "sticky";
-  outSpan.style.bottom = 0;
-  document.body.appendChild(outSpan);
 
-  myimg.addEventListener("click", () =>{
-    document.location.href = "api.html";
-  })
 
-  setInterval(() =>{
-  if(rotateDeg === 360){
-    rotateDeg = 0;
-  }
-  document.getElementById("rotateImg").style.transform = `rotate(${rotateDeg}deg)`;
-  rotateDeg += 20;
-},300)
+
+
+
+
+
+
+
+
+
+
+
+ 
+
