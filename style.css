@@ -4,7 +4,7 @@
 }
 
 .earth{
-    position: sticky;
+    position: fixed;
     bottom: -13%;
     left: 17vw; 
     transform: translate(-50%,-50%);
